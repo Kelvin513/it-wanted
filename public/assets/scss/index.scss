@@ -109,9 +109,14 @@ nav {
   }
 }
 
+i {
+  color: #777777;
+  font-size: 18px;
+}
 
-
-
+::selection {
+    background: #a1a1a1;
+}
 
 
 @media screen and (max-width:768px){

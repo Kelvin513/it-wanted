@@ -102,3 +102,16 @@ nav span.active {
   text-align: center;
   font-size: 18px;
 }
+
+i {
+  color: #777777;
+  font-size: 18px;
+}
+
+::-moz-selection {
+  background: #a1a1a1;
+}
+
+::selection {
+  background: #a1a1a1;
+}
