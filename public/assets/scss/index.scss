@@ -49,11 +49,13 @@ nav {
 
   span:hover {
     color: white;
+    text-decoration: none;
   }
 
   span.active {
     background-color: #292929;
     color: white;
+    text-decoration: none;
   }
 
   ._nav_intro {

@@ -50,11 +50,13 @@ nav span {
 
 nav span:hover {
   color: white;
+  text-decoration: none;
 }
 
 nav span.active {
   background-color: #292929;
   color: white;
+  text-decoration: none;
 }
 
 .main {
