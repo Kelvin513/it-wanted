@@ -87,13 +87,23 @@ nav {
 
   h4 {
     color: #A0D9DB;
-    width: 540px;
+    width: 550px;
     border-left: dashed 1px #634034;
+  }
+
+  .lili {
+    list-style-type:square;
+    text-indent: 36px;
   }
 }
 
 .indent-1 {
   padding-left: 36px;
+  border-left: dashed 1px #634034;
+}
+
+.indent-2 {
+  padding-left: 18px;
   border-left: dashed 1px #634034;
 }
 
@@ -125,6 +135,25 @@ i {
 
 ::selection {
     background: #a1a1a1;
+}
+
+a {
+  color: #E8DE6B;
+  text-decoration: underline;
+  outline: none;
+  transition: all .1s;
+}
+
+a:focus, a:hover {
+ color: #FFEA00;
+ outline: none;
+}
+
+.sb-thumbnail {
+  position: fixed;
+  right: 20px;
+  top: 70px;
+  width: 128px;
 }
 
 footer {
