@@ -1,0 +1,17 @@
+nav {
+	width: 305px;
+	background-color: #3b3b3b;
+	position: fixed;
+	height: 2250px;
+}
+
+._nav_title {
+	font-size: 18px;
+	color: white;
+	line-height: 33px;
+	display: block;
+}
+
+._nav_title:hover {
+	color: white;
+}
