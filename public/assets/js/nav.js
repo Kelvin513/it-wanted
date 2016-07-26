@@ -21,16 +21,21 @@ $(document).ready(function() {
     });
     $("span.active").removeClass("active")
     $("nav span").eq(index).addClass("active");
-    // $("nav").removeClass('open');//畫面捲動收起來
+    $(".active").parent(".toggle").slideDown(200);
   }).scroll();
 })
 
 $(function() {
-  $('nav span').click(function() {
-    var href = $(this).attr("data-target");
-    $('html, body').animate({
-      scrollTop: $( "#" + href).offset().top - 200
-    }, 350);
-    return false;
-  });
+	$('nav span').click(function() {
+	var href = $(this).attr("data-target");
+	$('html, body').animate({
+	  scrollTop: $( "#" + href).offset().top - 200
+	}, 350);
+	return false;
+});
+
+  $('nav>div h2').click(function() {
+  	$(this).next(".toggle").slideToggle(150);
+  })
+
 });

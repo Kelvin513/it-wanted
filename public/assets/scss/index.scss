@@ -37,6 +37,8 @@ nav {
     text-indent: 35px;
     transition: all .1s;
     line-height: 2.3;
+    position: relative;
+
   }
 
   span {
@@ -58,10 +60,15 @@ nav {
     text-decoration: none;
   }
 
-  ._nav_intro {
-
+  .toggle {
+    position: relative;
+    .open {
+      position: absolute;
+      left: 35px;
+      top: -28px;
+      pointer-events: none;
+    }
   }
-
 }
 
 .main {

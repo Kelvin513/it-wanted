@@ -38,6 +38,7 @@ nav h2 {
   text-indent: 35px;
   transition: all .1s;
   line-height: 2.3;
+  position: relative;
 }
 
 nav span {
@@ -57,6 +58,17 @@ nav span.active {
   background-color: #292929;
   color: white;
   text-decoration: none;
+}
+
+nav .toggle {
+  position: relative;
+}
+
+nav .toggle .open {
+  position: absolute;
+  left: 35px;
+  top: -28px;
+  pointer-events: none;
 }
 
 .main {
