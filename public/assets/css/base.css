@@ -5,5 +5,13 @@
 
 h2, h4, span {
 	font-size: 18px;
-	line-height: 33px;
+	line-height: 1.7;
+}
+
+html, body {
+	height: 100%;
+}
+
+.h-50 {
+	height: 50px;
 }

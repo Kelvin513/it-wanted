@@ -27,20 +27,17 @@ nav {
   background-color: #3b3b3b;
   position: fixed;
   height: 100vh;
-  padding-top: 35px;
+  padding-top: 24px;
+  line-height: 2;
 }
 
 nav h2 {
   color: white;
-  line-height: 33px;
   display: block;
   cursor: pointer;
   text-indent: 35px;
   transition: all .1s;
-}
-
-nav h2:hover {
-  color: white;
+  line-height: 2.3;
 }
 
 nav span {
@@ -62,6 +59,46 @@ nav span.active {
 
 .main {
   width: 100%;
-  height: 100%;
   background-color: #292929;
+}
+
+.main article {
+  padding: 80px 0 0 30px;
+  margin-left: 305px;
+}
+
+.main h2 {
+  color: #E08A43;
+  font-weight: 600;
+}
+
+.main h4 {
+  color: #A0D9DB;
+  width: 540px;
+  border-left: dashed 1px #634034;
+}
+
+.indent-1 {
+  padding-left: 36px;
+  border-left: dashed 1px #634034;
+}
+
+.tabs {
+  height: 65px;
+  width: 100%;
+  background-color: #1f1f1f;
+  position: fixed;
+  left: 305px;
+}
+
+.tabs .tab {
+  width: 290px;
+  background-color: #292929;
+  height: 100%;
+  border-bottom: solid 3px #ed7a53;
+  color: white;
+  font-weight: 600;
+  line-height: 68px;
+  text-align: center;
+  font-size: 18px;
 }
