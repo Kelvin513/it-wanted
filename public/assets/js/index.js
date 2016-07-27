@@ -15,13 +15,23 @@ sr.reveal('.sec5 .reveal',340);
 
 onkeydown = function(e){
   if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 219){
+    // cmd + [
     e.preventDefault();
     console.log("prev tab");
     // $(".nav.active").removeClass("active").next(".nav").addClass("active");
   }
   if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 221){
+    // cmd + ]
     e.preventDefault();
     console.log("next tab");
+  }
+  if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 68){
+    // cmd + d
+    e.preventDefault();
+    var href = 's3-1';
+    $('html, body').animate({
+        scrollTop: $( "#" + href).offset().top - 200
+    }, 350);
   }
 }
 
