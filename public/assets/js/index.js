@@ -20,24 +20,24 @@ onkeydown = function(e){
     $(".fa-pencil").show();
     $(".close-tab").hide();
   }
-  if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 219){
+  if((e.metaKey || e.ctrlKey) && e.keyCode == 219){
     // cmd + [
     e.preventDefault();
     console.log("prev tab");
     // $(".nav.active").removeClass("active").next(".nav").addClass("active");
   }
-  if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 221){
+  if((e.metaKey || e.ctrlKey) && e.keyCode == 221){
     // cmd + ]
     e.preventDefault();
     console.log("next tab");
   }
-  if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 83){
+  if((e.metaKey || e.ctrlKey) && e.keyCode == 83){
     // cmd + s 鉛筆變成叉叉
     e.preventDefault();
     $(".fa-pencil").hide();
     $(".close-tab").show();
   }
-  if(((e.metaKey || e.ctrlKey) || e.ctrlKey) && e.keyCode == 68){
+  if((e.metaKey || e.ctrlKey) && e.keyCode == 68){
     // cmd + d
     e.preventDefault();
     j = (i % 3) + 1;
