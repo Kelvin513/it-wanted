@@ -125,6 +125,7 @@ nav .toggle .open {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: default;
 }
 
 .tabs .tab {
@@ -138,12 +139,24 @@ nav .toggle .open {
   float: left;
 }
 
+.tabs .sub-tab {
+  width: 150px;
+}
+
+.tabs .tab:hover {
+  background-color: #313131;
+}
+
 .tabs .active {
   color: white;
   font-weight: 600;
   background-color: #292929;
   border-bottom: solid 3px #ed7a53;
   border-right: none;
+}
+
+.tabs .active:hover {
+  background-color: #292929;
 }
 
 i {

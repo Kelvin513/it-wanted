@@ -13,7 +13,7 @@ $(document).ready(function() {
   $(window).scroll(function(){
     var scrollTop = $(window).scrollTop();
     var windowHeight = $(".section").height();
-    var scrollPosition = scrollTop + windowHeight;
+    var scrollPosition = scrollTop + windowHeight - 200;
     var index = 0;
     $(".section").each(function(i, element) {
       var j_this = $(this);
@@ -32,7 +32,7 @@ $(function() {
   $('nav span').click(function() {
     var href = $(this).attr("data-target");
     $('html, body').animate({
-        scrollTop: $( "#" + href).offset().top - 200
+        scrollTop: $( "#" + href).offset().top - 150
     }, 350);
     return false;
   });
