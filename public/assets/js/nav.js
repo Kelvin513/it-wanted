@@ -27,12 +27,12 @@ $(document).ready(function() {
 
 $(function() {
 	$('nav span').click(function() {
-	var href = $(this).attr("data-target");
-	$('html, body').animate({
-	  scrollTop: $( "#" + href).offset().top - 200
-	}, 350);
-	return false;
-});
+  	var href = $(this).attr("data-target");
+  	$('html, body').animate({
+    	  scrollTop: $( "#" + href).offset().top - 200
+  	}, 350);
+  	return false;
+  });
 
   $('nav>div h2').click(function() {
   	$(this).next(".toggle").slideToggle(150);

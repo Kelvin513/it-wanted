@@ -154,9 +154,10 @@ a:focus, a:hover {
 
 .sb-thumbnail {
   position: fixed;
-  right: 20px;
-  top: 70px;
-  width: 128px;
+  right: 35px;
+  top: 60px;
+  width: 90px;
+  opacity: 0.65;
 }
 
 footer {
