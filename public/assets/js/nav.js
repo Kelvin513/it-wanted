@@ -1,3 +1,5 @@
+var 職缺 = ["後端工程師","前端工程師","技術專案經理"];
+
 $(document).ready(function() {
   // $("nav a").click(function() {
   //   var target = $(".section").eq($(this).index());
@@ -23,19 +25,32 @@ $(document).ready(function() {
     $("nav span").eq(index).addClass("active");
     $(".active").parent(".toggle").slideDown(200);
   }).scroll();
+
 })
 
 $(function() {
-	$('nav span').click(function() {
-  	var href = $(this).attr("data-target");
-  	$('html, body').animate({
-    	  scrollTop: $( "#" + href).offset().top - 200
-  	}, 350);
-  	return false;
+  $('nav span').click(function() {
+    var href = $(this).attr("data-target");
+    $('html, body').animate({
+        scrollTop: $( "#" + href).offset().top - 200
+    }, 350);
+    return false;
   });
 
   $('nav>div h2').click(function() {
-  	$(this).next(".toggle").slideToggle(150);
+    $(this).next(".toggle").slideToggle(150);
   })
 
+  $('.sb-thumbnail').click(function() {
+    $('.easter-egg').css({
+      'opacity': 1,
+      'z-index': 2
+    });
+    $('.easter-egg').click(function() {
+      $(this).css({
+      'opacity': 0,
+      'z-index': -1
+    });
+  });
+  })
 });

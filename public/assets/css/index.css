@@ -79,6 +79,7 @@ nav .toggle .open {
 .main article {
   padding: 80px 0 0 30px;
   margin-left: 305px;
+  cursor: text;
 }
 
 .main h2 {
@@ -89,7 +90,7 @@ nav .toggle .open {
 .main h4 {
   color: #A0D9DB;
   width: 550px;
-  border-left: dashed 1px #634034;
+  border-left: dotted 1px #634034;
 }
 
 .main .lili {
@@ -99,12 +100,11 @@ nav .toggle .open {
 
 .indent-1 {
   padding-left: 36px;
-  border-left: dashed 1px #634034;
+  border-left: dotted 1px #634034;
 }
 
 .indent-2 {
   padding-left: 18px;
-  border-left: dashed 1px #634034;
 }
 
 .tabs {
@@ -155,9 +155,13 @@ a:focus, a:hover {
 .sb-thumbnail {
   position: fixed;
   right: 35px;
-  top: 60px;
+  top: 65px;
   width: 90px;
-  opacity: 0.65;
+  opacity: 0.55;
+}
+
+.sb-thumbnail:hover {
+  opacity: 0.7;
 }
 
 footer {
@@ -169,4 +173,31 @@ footer {
   color: #777;
   text-align: center;
   font-family: helvetica;
+}
+
+.easter-egg {
+  z-index: -1;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  opacity: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  transition: .1s all ease;
+}
+
+.easter-egg span {
+  color: white;
+  font-size: 20px;
 }
