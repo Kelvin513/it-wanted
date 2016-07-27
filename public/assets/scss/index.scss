@@ -21,7 +21,6 @@ h1,h2,h3,h4 {
   margin: 0;
 }
 
-
 nav {
   width: 305px;
   background-color: #3b3b3b;
@@ -29,6 +28,10 @@ nav {
   height: 100vh;
   padding-top: 24px;
   line-height: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   h2 {
     color: white;
@@ -92,6 +95,10 @@ nav {
     border-left: dotted 1px #634034;
   }
 
+  h5 {
+    color: white;
+  }
+
   .lili {
     list-style-type:square;
     text-indent: 36px;
@@ -114,6 +121,10 @@ nav {
   background-color: #1f1f1f;
   position: fixed;
   left: 305px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   .tab {
     // position: relative;
@@ -156,7 +167,10 @@ a:focus, a:hover {
   top: 65px;
   width: 90px;
   opacity: 0.55;
-  // transition: all .1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .sb-thumbnail:hover {
