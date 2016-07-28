@@ -23,13 +23,18 @@ onkeydown = function(e){
   if((e.metaKey || e.ctrlKey) && e.keyCode == 219){
     // cmd + [
     e.preventDefault();
-    console.log("prev tab");
-    // $(".nav.active").removeClass("active").next(".nav").addClass("active");
+    var this_index = $('.tab.active').index();
+    this_index = (this_index - 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 221){
     // cmd + ]
     e.preventDefault();
-    console.log("next tab");
+    var this_index = $('.tab.active').index();
+    this_index = (this_index + 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 83){
     // cmd + s 鉛筆變成叉叉
