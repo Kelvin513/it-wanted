@@ -160,6 +160,8 @@ nav {
     float: left;
     width: 25%;
     max-width: 230px;
+    box-shadow: -30px 34px 0 -31px transparent;
+    transition: box-shadow .3s ease;
   }
 
   .tab:hover {
@@ -170,8 +172,9 @@ nav {
     color: white;
     font-weight: 600;
     background-color: #292929;
-    border-bottom: solid 3px #ed7a53;
     border-right: none;
+    box-shadow: 0px 5px 0 -1px #ed7a53;
+    // transition: box-shadow 1s ease;
   }
 
   .tab.active:hover {
