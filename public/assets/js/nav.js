@@ -26,6 +26,15 @@ $(document).ready(function() {
     $(".active").parent(".toggle").slideDown(200);
   }).scroll();
 
+  $(".tab").click(function() {
+    var folder = $(this).attr("data-at");
+    
+    $(".tab").removeClass("active");
+    $(this).addClass("active");
+
+    $("article").removeClass("show");
+    $("article." + folder ).addClass("show");
+  })
 })
 
 $(function() {
@@ -54,3 +63,5 @@ $(function() {
   });
   })
 });
+
+

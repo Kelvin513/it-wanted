@@ -29,6 +29,7 @@
 </head>
 <body>
   <nav>
+    <h1>貝殼放大工程部徵人.hr</h1>
     <div class="_nav_intro">
       <h2><img src="/assets/img/folder.svg">認識我們</h2>
       <div class="toggle">
@@ -38,7 +39,6 @@
         <span data-target="s1-3">獨立集資</span>
       </div>
     </div>
-    
     
     <div class="product">
       <h2><img src="/assets/img/folder.svg">產品</h2>
@@ -75,19 +75,30 @@
   </nav>
 
   <div class="tabs">
-    <h1 class="tab active">
-      貝殼放大工程部徵人.hr
+    <div class="tab active" data-at="intro">認識我們
       <i class="fa fa-pencil" aria-hidden="true" style="display: none;"></i>
       <span class="close-tab">&times;</span>
-    </h1>
+    </div>
 
-    <div class="tab sub-tab">產品</div>
-    <div class="tab sub-tab">職缺需求</div>
-    <div class="tab sub-tab">福利與團隊</div>
+    <div class="tab" data-at="product-intro">產品
+      <i class="fa fa-pencil" aria-hidden="true" style="display: none;"></i>
+      <span class="close-tab">&times;</span>
+    </div>
+
+    <div class="tab" data-at="wanted">職缺需求
+      <i class="fa fa-pencil" aria-hidden="true" style="display: none;"></i>
+      <span class="close-tab">&times;</span>
+    </div>
+
+    <div class="tab" data-at="well-fare">福利與團隊
+      <i class="fa fa-pencil" aria-hidden="true" style="display: none;"></i>
+      <span class="close-tab">&times;</span>
+    </div>
+
   </div>
 
   <div class="main">
-    <article>
+    <article class="intro show">
       <i>&lt;!-- this's a theme for Sublime Text named predawn --&gt;</i>
       
       <h4>
@@ -141,7 +152,10 @@
       </div>
       
       <br>
-      
+
+    </article>
+
+    <article class="product-intro">
       <div class="section" id="s2-1">
       <h2>Backme</h2>
       <div class="indent-1">
@@ -227,7 +241,10 @@
       </h4>
 
       <br>
-      
+    </article>
+
+    <article class="wanted">
+            
       <div class="section" id="s3-1">
       <h2>後端工程師</h2>
       <div class="indent-1">
@@ -323,7 +340,7 @@
       <h2>技術專案經理</h2>
       <div class="indent-1">
         <h4>
-          在這麼多的產品與 Landing Page 業務下，我們需要一個像是內務大臣的 PM <br>角色，協助控管工程部相關的開發時程，更重要是他在文件製作與管理上也要有些本事。<br>
+          在這麼多的產品與 Landing Page 業務下，我們需要一個像是內務大臣的 PM 角色，協助控管工程部相關的開發時程，更重要是他在文件製作與管理上也要有些本事。<br>
           <br>
           工作內容簡述<br>
           1. 管理專案開發時程 <br>
@@ -346,7 +363,9 @@
       </div>
       
       <br>
+    </article>
 
+    <article class="well-fare">
       <h4>
         回顧這近10個月的專注產品之旅，我們花了非常多心思在培養團隊，現階段的近10位夥伴，主要都是一個一個從實習生培養起，到現在每個人都有獨當一面的能力，從發想、規劃、實踐到寫測試等；團隊我想最自豪的就是「只有我是完整念完學歷？」，其他無一不是休學、肄業、延畢等（也是大家明確知道現階段想做什麼），許多來了一兩個禮拜就想休學專心實習，真是沒人慫恿他們這樣的想法（We promise）。
         <br><br>
@@ -463,8 +482,10 @@
       </h4>
 
       <div class="h-100"></div>
-
     </article>
+
+
+
   </div>
 
   <img class="sb-thumbnail" src="/assets/img/thumbnail.png">
