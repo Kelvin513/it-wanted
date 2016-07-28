@@ -67,10 +67,14 @@ $(function() {
 
   $(".main").click(function() {
     $("nav").removeClass("n-show");
+    $(".hamburger").removeClass("h-hide");
+    $(".call-to-action").removeClass("c-hide");
   })
 
   $(".hamburger").click(function() {
     $("nav").toggleClass("n-show");
+    $(this).toggleClass("h-hide");
+    $(".call-to-action").toggleClass("c-hide");
   })
 
 
