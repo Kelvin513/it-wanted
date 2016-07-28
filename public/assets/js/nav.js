@@ -92,6 +92,11 @@ $(function() {
     $(".call-to-action").toggleClass("c-hide");
   })
 
+  $('.intro a.job-position').click(function(e) {
+    e.preventDefault();
+    var target = $(this).data("target");
+    $('[data-target="' + target + '"]').click();
+  });
 
 
 });
