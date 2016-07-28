@@ -49,5 +49,12 @@ onkeydown = function(e){
   }
 }
 
-
+$(function() {
+  $('.reminder').click(function() {
+    var this_index = $('.tab.active').index();
+    this_index = (this_index + 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
+  })
+});
 
