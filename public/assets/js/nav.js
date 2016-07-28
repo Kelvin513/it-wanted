@@ -95,13 +95,3 @@ $(function() {
 
 
 });
-
-  // $('.tabs .tab').click(function() {
-  //   var show_target = $(this).data('at');
-  //   console.log(show_target);
-  //   $("span.active").removeClass("active")
-  //   $('nav div[data-at="' + show_target + '"] .toggle span').eq(0).click();
-  //   $("span.active").parent(".toggle").slideDown(200);
-
-  // });
-});
