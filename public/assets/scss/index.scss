@@ -166,7 +166,7 @@ nav {
     background-color: #313131;
   }
 
-  .active {
+  .tab.active {
     color: white;
     font-weight: 600;
     background-color: #292929;
@@ -174,10 +174,29 @@ nav {
     border-right: none;
   }
 
-  .active:hover {
+  .tab.active:hover {
     background-color: #292929;
   }
+
+  .tab.active {
+    .fa-pencil.active, .close-tab.active {
+      display: inline-block;
+      color: white;
+    }
+  }
+
+  .tab {
+    .fa-pencil.active, .close-tab.active {
+      color: #929292;
+      display: inline-block;
+    }
+    .fa-pencil, .close-tab {
+      display: none;
+    }
+  }
+
 }
+
 
 i {
   color: #777777;

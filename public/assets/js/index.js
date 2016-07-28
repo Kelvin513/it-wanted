@@ -17,8 +17,9 @@ var i = 0;
 
 onkeydown = function(e){
   if(!e.metaKey) {
-    $(".fa-pencil").show();
-    $(".close-tab").hide();
+    var active_article_index = $('article.show').index();
+    $(".fa-pencil").eq(active_article_index).addClass('active');
+    $(".close-tab").eq(active_article_index).removeClass('active');
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 219){
     // cmd + [
@@ -39,8 +40,8 @@ onkeydown = function(e){
   if((e.metaKey || e.ctrlKey) && e.keyCode == 83){
     // cmd + s 鉛筆變成叉叉
     e.preventDefault();
-    $(".fa-pencil").hide();
-    $(".close-tab").show();
+    $(".fa-pencil").removeClass('active');
+    $(".close-tab").addClass('active');
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 68){
     // cmd + d
