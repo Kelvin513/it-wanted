@@ -55,13 +55,26 @@ $(function() {
       'opacity': 1,
       'z-index': 2
     });
+
     $('.easter-egg').click(function() {
       $(this).css({
-      'opacity': 0,
-      'z-index': -1
+        'opacity': 0,
+        'z-index': -1
+      });
     });
-  });
   })
+
+
+  $(".main").click(function() {
+    $("nav").removeClass("n-show");
+  })
+
+  $(".hamburger").click(function() {
+    $("nav").toggleClass("n-show");
+  })
+
+
+
 });
 
 

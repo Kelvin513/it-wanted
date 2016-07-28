@@ -37,6 +37,9 @@ nav {
   h1 {
     color: white;
     font-size: 18px;
+    text-indent: 40px;
+    margin-bottom: 15px;
+    font-weight: 600;
   }
 
   h2 {
@@ -47,7 +50,6 @@ nav {
     transition: all .1s;
     line-height: 2.3;
     position: relative;
-
   }
 
   span {
@@ -92,6 +94,10 @@ nav {
     overflow-y: scroll;
     height: 100vh;
   }
+  
+  article::-webkit-scrollbar {
+    width: 0;
+  }
 
   article.show {
     display: block;
@@ -130,7 +136,7 @@ nav {
 
 .tabs {
   height: 65px;
-  width: 100%;
+  width: calc( 100% - 305px );
   background-color: #1f1f1f;
   position: fixed;
   left: 305px;
@@ -152,7 +158,8 @@ nav {
     text-align: center;
     font-size: 18px;
     float: left;
-    width: 230px;
+    width: 25%;
+    max-width: 230px;
   }
 
   .tab:hover {
@@ -244,6 +251,108 @@ footer {
   }
 }
 
+.hamburger {
+  display: none;
+}
+
+.reminder h4 {
+  color: #E8DE6B;
+  text-decoration: underline;
+  outline: none;
+  transition: all .1s;
+}
+
+@media screen and (max-width:1024px){
+  .sb-thumbnail {
+    display: none;
+  }
+}
+
 @media screen and (max-width:768px){
+  nav {
+    width: 250px;
+    right: -305px;
+    box-shadow: -13px 2px 23px 0 rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in;
+
+    h1 {
+      text-indent: 17px;
+    }
+
+    h2 {
+      text-indent: 15px;
+    }
+
+    span {
+      text-indent: 58px;
+    }
+
+    .toggle .open {
+      left: 15px; 
+    }
+  }
+  
+  .main {
+    article {
+      padding: 10px;
+      margin-left: 0;
+      cursor: text;
+      display: none;
+      overflow-y: scroll;
+      height: 100vh;
+
+      h4 {
+        width: 100%;
+      }
+    }
+  }
+  
+  .tabs {
+    display: none;
+  }
+
+  .indent-1 {
+    padding-left: 16px;
+  }
+
+  .indent-2 {
+    padding-left: 9px;
+  }
+
+  footer {
+    display: none;
+  }
+  
+  .call-to-action {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #ed7a53;
+    line-height: 50px;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #1f1f1f;
+  }
+  
+  nav.n-show {
+    right: 0;
+    overflow-y: scroll;
+    padding-bottom: 50px;
+  }
 
 }
