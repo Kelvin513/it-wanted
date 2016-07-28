@@ -10,44 +10,60 @@ $(document).ready(function() {
   //   })
   // });
 
-  $(window).scroll(function(){
-    var scrollTop = $(window).scrollTop();
-    var windowHeight = $(".section").height();
-    var scrollPosition = scrollTop + windowHeight - 200;
+  $("article").scroll(function(){
+    var scrollTop = $("article.show").scrollTop();
+    var windowHeight = $("article.show .section").height();
+    
+    var scrollPosition = scrollTop;
+    
+    console.log("scrollPos = "+scrollPosition);
+
     var index = 0;
-    $(".section").each(function(i, element) {
+
+    // 每次點就會到 $("#" + href).offset().top + $('article.show').scrollTop() - 65
+    // $('article.show').scrollTop() = 哪個 $("#" + href).offset().top + $('article.show').scrollTop() - 65
+    var min_distance = 100000;
+    $("article.show .section").each(function(i, element) {
       var j_this = $(this);
-      if( scrollPosition > j_this.offset().top ) {
+      // var min_how_close_you_are = j_this.offset().top - 65
+      var this_distance = Math.abs(j_this.offset().top - 65)
+
+      if( min_distance > this_distance ) {
+        min_distance = this_distance
+        console.log(i+"j_this.offset().top-65 = " + j_this.offset().top)
         index = i;
       }
     });
     $("span.active").removeClass("active")
-    $("nav span").eq(index).addClass("active");
-    $(".active").parent(".toggle").slideDown(200);
+    $("div.active .toggle span").eq(index).addClass("active");
+    $("span.active").parent(".toggle").slideDown(200);
   }).scroll();
 
-  $(".tab").click(function() {
+  $(".tab, nav>div, nav span").click(function() {
     var folder = $(this).attr("data-at");
-    
     $(".tab").removeClass("active");
-    $(this).addClass("active");
-
+    $(".tab[data-at=" + folder + "]").addClass("active");
+    $("nav>div").removeClass("active");
+    $("nav>div[data-at=" + folder + "]").addClass("active");
     $("article").removeClass("show");
     $("article." + folder ).addClass("show");
+    $("article.show").scroll();
   })
 })
 
 $(function() {
   $('nav span').click(function() {
     var href = $(this).attr("data-target");
-    $('html, body').animate({
-        scrollTop: $( "#" + href).offset().top - 150
+    $('article.show').animate({
+        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65
     }, 350);
+    console.log($(this).attr("data-target"));
+    console.log($( "#" + href).offset().top - $('article.show').scrollTop());
     return false;
   });
 
   $('nav>div h2').click(function() {
-    $(this).next(".toggle").slideToggle(150);
+    $(this).next(".toggle").slideDown(150);
   })
 
   $('.sb-thumbnail').click(function() {
@@ -63,7 +79,6 @@ $(function() {
       });
     });
   })
-
 
   $(".main").click(function() {
     $("nav").removeClass("n-show");
@@ -81,4 +96,12 @@ $(function() {
 
 });
 
+  // $('.tabs .tab').click(function() {
+  //   var show_target = $(this).data('at');
+  //   console.log(show_target);
+  //   $("span.active").removeClass("active")
+  //   $('nav div[data-at="' + show_target + '"] .toggle span').eq(0).click();
+  //   $("span.active").parent(".toggle").slideDown(200);
 
+  // });
+});
