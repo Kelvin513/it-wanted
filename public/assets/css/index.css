@@ -36,6 +36,11 @@ nav {
   user-select: none;
 }
 
+nav .orange {
+  color: #E08A43;
+  font-weight: 600;
+}
+
 nav h1 {
   color: white;
   font-size: 18px;
@@ -166,7 +171,7 @@ nav .toggle .open {
   float: left;
   width: 25%;
   max-width: 230px;
-  box-shadow: -30px 34px 0 -31px transparent;
+  box-shadow: 30px -34px 0 -31px transparent inset;
   transition: box-shadow .3s ease;
 }
 
@@ -179,7 +184,7 @@ nav .toggle .open {
   font-weight: 600;
   background-color: #292929;
   border-right: none;
-  box-shadow: 0px 5px 0 -1px #ed7a53;
+  box-shadow: 0px -5px 0 -1px #ed7a53 inset;
 }
 
 .tabs .tab.active:hover {
