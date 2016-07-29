@@ -55,7 +55,7 @@ $(function() {
   $('nav span').click(function() {
     var href = $(this).attr("data-target");
     $('article.show').animate({
-        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65
+        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65 - 100
     }, 350);
     console.log($(this).attr("data-target"));
     console.log($( "#" + href).offset().top - $('article.show').scrollTop());
@@ -93,9 +93,22 @@ $(function() {
   })
 
   $('.intro a.job-position').click(function(e) {
+    // 點職缺
     e.preventDefault();
-    var target = $(this).data("target");
-    $('[data-target="' + target + '"]').click();
+  
+    var folder = $(this).attr("data-at");
+    $(".tab").removeClass("active");
+    $(".tab[data-at=" + folder + "]").addClass("active");
+    $("nav>div").removeClass("active");
+    $("nav>div[data-at=" + folder + "]").addClass("active");
+    $("article").removeClass("show");
+    $("article." + folder ).addClass("show");
+    var href = $(this).attr("data-target");
+    $('article.show').animate({
+        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65 - 100
+    }, 350);
+    $("article.show").scroll();
+    return false;
   });
 
 

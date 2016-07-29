@@ -46,11 +46,21 @@ onkeydown = function(e){
   if((e.metaKey || e.ctrlKey) && e.keyCode == 68){
     // cmd + d
     e.preventDefault();
+
+
+
+    $(".tab").removeClass("active");
+    $(".tab[data-at=wanted]").addClass("active");
+    $("nav>div").removeClass("active");
+    $("nav>div[data-at=wanted]").addClass("active");
+    $("article").removeClass("show");
+    $("article.wanted").addClass("show");
     j = (i % 3) + 1;
     var href = 's3-' + j;
-    $('html, body').animate({
-        scrollTop: $( "#" + href).offset().top - 200
+    $('article.show').animate({
+        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65 - 100
     }, 350);
+    $("article.show").scroll();
     i++;
   }
 }
