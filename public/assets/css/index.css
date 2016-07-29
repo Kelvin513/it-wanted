@@ -376,6 +376,7 @@ footer {
     text-align: center;
     font-weight: 600;
     transition: .1s ease-in;
+    cursor: pointer;
   }
   .c-hide {
     bottom: -50px;

@@ -1,4 +1,10 @@
+console.log("你想應徵什麼職缺?");
+
 var 職缺 = ["後端工程師","前端工程師","技術專案經理"];
+
+var 後端工程師 = "a115a25065b29adfe4c0b73391cd5b3a";
+var 前端工程師 = "3f7e78cd0523c5ab4c664d2ecde12de9";
+var 技術專案經理 = "9cdfd856e431d652962a6e8eea32d89f";
 
 $(document).ready(function() {
   // $("nav a").click(function() {
@@ -16,7 +22,7 @@ $(document).ready(function() {
     
     var scrollPosition = scrollTop;
     
-    console.log("scrollPos = "+scrollPosition);
+    // console.log("scrollPos = "+scrollPosition);
 
     var index = 0;
 
@@ -30,7 +36,7 @@ $(document).ready(function() {
 
       if( min_distance > this_distance ) {
         min_distance = this_distance
-        console.log(i+"j_this.offset().top-65 = " + j_this.offset().top)
+        // console.log(i+"j_this.offset().top-65 = " + j_this.offset().top)
         index = i;
       }
     });
@@ -57,8 +63,17 @@ $(function() {
     $('article.show').animate({
         scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65 - 100
     }, 350);
-    console.log($(this).attr("data-target"));
-    console.log($( "#" + href).offset().top - $('article.show').scrollTop());
+    // console.log($(this).attr("data-target"));
+    // console.log($( "#" + href).offset().top - $('article.show').scrollTop());
+    return false;
+  });
+
+  $('.call-to-action').click(function() {
+    var href = $(this).attr("data-target");
+    $('article.show').animate({
+        scrollTop: $( "#" + href).offset().top + $('article.show').scrollTop() - 65 - 100
+    }, 350);
+    console.log(href);
     return false;
   });
 
