@@ -17,25 +17,31 @@ var i = 0;
 
 onkeydown = function(e){
   if(!e.metaKey) {
-    $(".fa-pencil").show();
-    $(".close-tab").hide();
+    var active_article_index = $('article.show').index();
+    $(".fa-pencil").eq(active_article_index).addClass('active');
+    $(".close-tab").eq(active_article_index).removeClass('active');
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 219){
     // cmd + [
     e.preventDefault();
-    console.log("prev tab");
-    // $(".nav.active").removeClass("active").next(".nav").addClass("active");
+    var this_index = $('.tab.active').index();
+    this_index = (this_index - 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 221){
     // cmd + ]
     e.preventDefault();
-    console.log("next tab");
+    var this_index = $('.tab.active').index();
+    this_index = (this_index + 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 83){
     // cmd + s 鉛筆變成叉叉
     e.preventDefault();
-    $(".fa-pencil").hide();
-    $(".close-tab").show();
+    $(".fa-pencil").removeClass('active');
+    $(".close-tab").addClass('active');
   }
   if((e.metaKey || e.ctrlKey) && e.keyCode == 68){
     // cmd + d
@@ -49,5 +55,12 @@ onkeydown = function(e){
   }
 }
 
-
+$(function() {
+  $('.reminder').click(function() {
+    var this_index = $('.tab.active').index();
+    this_index = (this_index + 1) % 4;
+    $('.tab').removeClass('active');
+    $('.tab').eq(this_index).click();
+  })
+});
 

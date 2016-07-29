@@ -166,22 +166,38 @@ nav .toggle .open {
   float: left;
   width: 25%;
   max-width: 230px;
+  box-shadow: -30px 34px 0 -31px transparent;
+  transition: box-shadow .3s ease;
 }
 
 .tabs .tab:hover {
   background-color: #313131;
 }
 
-.tabs .active {
+.tabs .tab.active {
   color: white;
   font-weight: 600;
   background-color: #292929;
-  border-bottom: solid 3px #ed7a53;
   border-right: none;
+  box-shadow: 0px 5px 0 -1px #ed7a53;
 }
 
-.tabs .active:hover {
+.tabs .tab.active:hover {
   background-color: #292929;
+}
+
+.tabs .tab.active .fa-pencil.active, .tabs .tab.active .close-tab.active {
+  display: inline-block;
+  color: white;
+}
+
+.tabs .tab .fa-pencil.active, .tabs .tab .close-tab.active {
+  color: #929292;
+  display: inline-block;
+}
+
+.tabs .tab .fa-pencil, .tabs .tab .close-tab {
+  display: none;
 }
 
 i {

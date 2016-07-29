@@ -34,9 +34,9 @@ $(document).ready(function() {
         index = i;
       }
     });
-    $("span.active").removeClass("active")
+    $("nav span.active").removeClass("active")
     $("div.active .toggle span").eq(index).addClass("active");
-    $("span.active").parent(".toggle").slideDown(200);
+    $("nav span.active").parent(".toggle").slideDown(200);
   }).scroll();
 
   $(".tab, nav>div, nav span").click(function() {
@@ -92,6 +92,11 @@ $(function() {
     $(".call-to-action").toggleClass("c-hide");
   })
 
+  $('.intro a.job-position').click(function(e) {
+    e.preventDefault();
+    var target = $(this).data("target");
+    $('[data-target="' + target + '"]').click();
+  });
 
 
 });
