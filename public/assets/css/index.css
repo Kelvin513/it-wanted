@@ -121,6 +121,10 @@ nav .toggle .open {
   color: white;
 }
 
+.main .image {
+  color: #95C76B;
+}
+
 .main .lili {
   list-style-type: square;
   text-indent: 36px;
