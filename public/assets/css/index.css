@@ -331,6 +331,22 @@ footer {
   .main article h4 {
     width: 100%;
   }
+  .headroom {
+    will-change: transform;
+    transition: -webkit-transform 300ms ease-out;
+    transition: transform 300ms ease-out;
+    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+  }
+  .headroom--pinned {
+    -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  .headroom--unpinned {
+    -webkit-transform: translateY(-85px);
+        -ms-transform: translateY(-85px);
+            transform: translateY(-85px);
+  }
   .tabs {
     display: none;
   }

@@ -318,6 +318,7 @@ footer {
       left: 15px;
     }
   }
+
   
   .main {
     article {
@@ -334,6 +335,26 @@ footer {
     }
   }
   
+  body.mobile-only {
+    // overflow-y: scroll;
+  }
+  .main.mobile-only {
+    article {
+      // overflow-y: auto;
+    }
+  }
+
+  .headroom {
+      will-change: transform;
+      transition: transform 300ms ease-out;
+    }
+    .headroom--pinned {
+        transform: translateY(0%);
+    }
+    .headroom--unpinned {
+        transform: translateY(-85px);
+    }
+
   .tabs {
     display: none;
   }

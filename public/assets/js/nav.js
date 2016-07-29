@@ -92,6 +92,23 @@ $(function() {
     $(".call-to-action").toggleClass("c-hide");
   })
 
+  $("article").scroll(function() {
+    $("nav").removeClass("n-show");
+    $(".hamburger").removeClass("h-hide");
+    $(".call-to-action").removeClass("c-hide");
+  })
+
+  $(".call-to-action").headroom({
+    "offset": 205,
+    "tolerance": 5,
+    "classes": {
+      "initial": "animated",
+      "pinned": "slideDown",
+      "unpinned": "slideUp"
+    }
+  });
+
+
   $('.intro a.job-position').click(function(e) {
     // 點職缺
     e.preventDefault();
