@@ -128,6 +128,8 @@ nav .toggle .open {
 
 .main .image {
   color: #95C76B;
+  width: 900px;
+  display: inline-block;
 }
 
 .main .lili {
