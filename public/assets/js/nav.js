@@ -2,9 +2,9 @@ console.log("你想應徵什麼職缺?");
 
 var 職缺 = ["後端工程師","前端工程師","技術專案經理"];
 
-var 後端工程師 = "a115a25065b29adfe4c0b73391cd5b3a";
-var 前端工程師 = "3f7e78cd0523c5ab4c664d2ecde12de9";
-var 技術專案經理 = "9cdfd856e431d652962a6e8eea32d89f";
+var 後端工程師 = "果然還是手癢打開了 console？你看起來潛力無窮，快來加入我們吧！\n代碼：a115a25065b29adfe4c0b73391cd5b3a";
+var 前端工程師 = "看網頁第一步就開 console？你一定是個當前端的料！快來加入我們吧！\n代碼：3f7e78cd0523c5ab4c664d2ecde12de9";
+var 技術專案經理 = "打開 console 就對了，快來跟我們一起打拚奮鬥，加入我們吧！\n代碼：9cdfd856e431d652962a6e8eea32d89f";
 
 $(document).ready(function() {
   // $("nav a").click(function() {
