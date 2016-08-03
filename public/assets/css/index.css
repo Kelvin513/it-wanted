@@ -129,6 +129,8 @@ nav .toggle .open {
 
 .main .image {
   color: #95C76B;
+  width: 900px;
+  display: inline-block;
 }
 
 .main .lili {
@@ -211,10 +213,6 @@ i {
   font-size: 18px;
 }
 
-::-moz-selection {
-  background: #a1a1a1;
-}
-
 ::selection {
   background: #a1a1a1;
 }
@@ -268,19 +266,13 @@ footer {
   text-align: center;
   width: 100%;
   opacity: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.8);
   top: 0;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   transition: .1s all ease;
 }
 
@@ -339,19 +331,13 @@ footer {
   }
   .headroom {
     will-change: transform;
-    transition: -webkit-transform 300ms ease-out;
     transition: transform 300ms ease-out;
-    transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
   }
   .headroom--pinned {
-    -webkit-transform: translateY(0%);
-        -ms-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
   }
   .headroom--unpinned {
-    -webkit-transform: translateY(-85px);
-        -ms-transform: translateY(-85px);
-            transform: translateY(-85px);
+    transform: translateY(-85px);
   }
   .tabs {
     display: none;
